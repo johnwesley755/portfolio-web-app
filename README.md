@@ -61,7 +61,7 @@ Feel free to reach out:
 ## 🛠️ **How to Run Locally**  
 ```bash
 # Clone the repository
-git clone https://github.com/johnwesley755/portfolio.git
+git clone https://github.com/johnwesley755/portfolio-web-app.git
 
 # Navigate into the directory
 cd portfolio
