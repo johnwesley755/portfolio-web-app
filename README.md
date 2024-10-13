@@ -14,11 +14,7 @@ Welcome to **my portfolio**! This space showcases my journey of creating **user-
 ## 📸 **Website Screenshot**  
 Here’s a sneak peek at my portfolio:  
 
-![Portfolio Screenshot](.portfolio/src/assets/portfolio-screenshot.png)  
-*Your portfolio in action* 🎉  
-
-> *(Make sure the screenshot image is saved as `portfolio-screenshot.png` in the `assets` folder of your repository.)*
-
+![Portfolio Screenshot](./portfolio/src/assets/screenshot.png)  
 ---
 
 ## 📁 **Projects**  
