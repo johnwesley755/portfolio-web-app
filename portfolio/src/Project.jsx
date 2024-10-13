@@ -25,7 +25,7 @@ const projects = [
     name: "Soulsborne",
     image: soulsborneImg,
     description:
-      "A community platform for gamers to share strategies, tips, and experiences related to the Soulsborne game series.",
+      "Soulsborne is a platform linking students, instructors, and companies to align skills with market needs.",
     link: "https://soulsborne-bba5f.web.app/",
   },
   {
@@ -51,7 +51,8 @@ const Project = () => {
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-10"
           initial={{ opacity: 0, translateY: -50 }}
-          animate={{ opacity: 1, translateY: 0 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
           Projects
@@ -61,11 +62,12 @@ const Project = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="relative group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              className="relative group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer hover:border-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-purple-500/50"
               onClick={() => window.open(project.link, "_blank")}
-              initial={{ opacity: 0, translateY: 20 }}
-              animate={{ opacity: 1, translateY: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0, translateY: 30 }}
+              whileInView={{ opacity: 1, translateY: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="relative h-64">
                 <img
