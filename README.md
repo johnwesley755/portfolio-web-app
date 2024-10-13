@@ -11,6 +11,16 @@ Welcome to **my portfolio**! This space showcases my journey of creating **user-
 
 ---
 
+## 📸 **Website Screenshot**  
+Here’s a sneak peek at my portfolio:  
+
+![Portfolio Screenshot](./assets/portfolio-screenshot.png)  
+*Your portfolio in action* 🎉  
+
+> *(Make sure the screenshot image is saved as `portfolio-screenshot.png` in the `assets` folder of your repository.)*
+
+---
+
 ## 📁 **Projects**  
 Here’s a glimpse of some of my key projects, each reflecting my **passion** and **creativity**:  
 
@@ -75,4 +85,4 @@ If you found my portfolio inspiring, consider **giving it a ⭐** on **GitHub** 
 ---
 
 ## 🙏 **Acknowledgments**  
-A big thank you to the **open-source community** for continuous **inspiration** and **resources**!  �
+A big thank you to the **open-source community** for continuous **inspiration** and **resources**!  
