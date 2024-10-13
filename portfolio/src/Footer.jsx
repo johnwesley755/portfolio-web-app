@@ -21,7 +21,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <motion.a
-            href="https://github.com/yourusername"
+            href="https://github.com/johnwesley755"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -30,7 +30,7 @@ const Footer = () => {
             <FaGithub size={30} />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/yourusername/"
+            href="https://www.linkedin.com/in/john-wesley-6707ab258/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -39,7 +39,7 @@ const Footer = () => {
             <FaLinkedin size={30} />
           </motion.a>
           <motion.a
-            href="https://twitter.com/yourusername"
+            href="https://twitter.com/JohnWesley97513"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -48,7 +48,7 @@ const Footer = () => {
             <FaTwitter size={30} />
           </motion.a>
           <motion.a
-            href="https://www.instagram.com/yourusername/"
+            href="https://www.instagram.com/john_wesley_755/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300"

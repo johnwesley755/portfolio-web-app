@@ -33,14 +33,14 @@ const projects = [
     image: musicImg,
     description:
       "A music player web app featuring a clean design, customizable playlists, and a smooth user experience.",
-    link: "https://your-namma-isai-link.com",
+    link: "https://github.com/johnwesley755/namma-isai-music",
   },
   {
     name: "Gram Panchayat",
     image: gramImg,
     description:
       "A web platform for local governance, allowing residents to access services, submit complaints, and view ward details.",
-    link: "https://your-gram-panchayat-link.com",
+    link: "https://github.com/johnwesley755/gram-panchayat",
   },
 ];
 
