@@ -73,7 +73,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-gray-90 text-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-10"
+          className="text-4xl md:text-5xl font-bold text-center mb-10 text-white"
           initial={{ opacity: 0, translateY: -50 }}
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.5 }}
@@ -83,20 +83,24 @@ const Skills = () => {
 
         {/* Frontend Skills */}
         <div className="mb-12">
-          <h3 className="text-3xl font-semibold text-center mb-6">
+          <h3 className="text-3xl font-semibold text-center mb-6 text-white">
             Frontend Development
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {frontendSkills.map((skill, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                className="p-1 rounded-lg transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-400 hover:to-purple-400"
                 initial={{ opacity: 0, translateY: 20 }}
                 animate={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {skill.icon}
-                <h4 className="mt-4 text-lg font-bold">{skill.name}</h4>
+                <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg hover:cursor-pointer">
+                  {skill.icon}
+                  <h4 className="mt-4 text-lg font-bold text-white">
+                    {skill.name}
+                  </h4>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -104,20 +108,24 @@ const Skills = () => {
 
         {/* Backend Skills */}
         <div>
-          <h3 className="text-3xl font-semibold text-center mb-6">
+          <h3 className="text-3xl font-semibold text-center mb-6 text-white">
             Backend Development
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {backendSkills.map((skill, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                className="p-1 rounded-lg transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-400 hover:to-purple-400"
                 initial={{ opacity: 0, translateY: 20 }}
                 animate={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {skill.icon}
-                <h4 className="mt-4 text-lg font-bold">{skill.name}</h4>
+                <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg hover:cursor-pointer">
+                  {skill.icon}
+                  <h4 className="mt-4 text-lg font-bold text-white">
+                    {skill.name}
+                  </h4>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -125,24 +133,28 @@ const Skills = () => {
 
         {/* Programming Languages */}
         <div className="mt-12">
-          <h3 className="text-3xl font-semibold text-center mb-6">
+          <h3 className="text-3xl font-semibold text-center mb-6 text-white">
             Programming Languages
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {programmingLanguages.map((skill, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                className="p-1 rounded-lg transition-transform duration-300 hover:scale-105 hover:bg-gradient-to-r hover:from-blue-400 hover:via-green-400 hover:to-purple-400"
                 initial={{ opacity: 0, translateY: 20 }}
                 animate={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {skill.icon}
-                <h4 className="mt-4 text-lg font-bold">{skill.name}</h4>
+                <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg hover:cursor-pointer">
+                  {skill.icon}
+                  <h4 className="mt-4 text-lg font-bold text-white">
+                    {skill.name}
+                  </h4>
+                </div>
               </motion.div>
             ))}
           </div>
-        </div>  
+        </div>
       </div>
     </section>
   );
