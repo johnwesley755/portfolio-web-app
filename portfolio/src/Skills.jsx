@@ -70,7 +70,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-90 text-white">
+    <section id="skills" className="py-20 text-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-10 text-white"

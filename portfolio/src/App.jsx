@@ -8,7 +8,7 @@ import Footer from './Footer'
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-gray-90'>
       <Navbar />
       <Hero />
       <About />

@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-90 text-white py-10" id="footer">
+    <footer className="text-white py-10" id="footer">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-6"

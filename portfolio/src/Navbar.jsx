@@ -4,55 +4,41 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="w-full px-6 py-4 bg-gray-90 text-white shadow-lg font-bold">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
+    <nav className="w-full bg-gray-90 px-6 py-4 shadow-md fixed top-0 z-50">
+      <div className="max-w-[1280px] mx-auto flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-2xl font-extrabold text-secondary">John Wesley</h1>
+        <h1 className="text-4xl font-extrabold text-transparent bg-gradient-to-r from-teal-400 via-purple-500 to-pink-600 bg-clip-text animate-glow">
+          John Wesley
+        </h1>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-8 text-lg">
-          <a
-            className="hover:text-secondary transition duration-200"
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            className="hover:text-secondary transition duration-200"
-            href="#skills"
-          >
-            Skills
-          </a>
-          <a
-            className="hover:text-secondary transition duration-200"
-            href="#projects"
-          >
-            Projects
-          </a>
-          <a
-            className="hover:text-secondary transition duration-200"
-            href="#footer"
-          >
-            Contact
-          </a>
+        <div className="hidden md:flex space-x-8 text-lg font-bold">
+          {["About", "Skills", "Projects", "Contact"].map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 hover:scale-105 hover:text-secondary transition-all duration-300"
+            >
+              {link}
+            </a>
+          ))}
         </div>
 
-        {/* Hamburger Icon for Mobile */}
+        {/* Hamburger Menu for Mobile */}
         <button
-          className="md:hidden text-3xl focus:outline-none"
+          className="md:hidden text-3xl text-white hover:bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text transition-all duration-300 focus:outline-none"
           onClick={toggleMenu}
         >
           {isOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
         </button>
       </div>
 
-      {/* Mobile Sidebar Menu */}
+      {/* Sidebar Menu for Mobile */}
       <motion.div
-        className={`fixed inset-0 z-50 bg-black bg-opacity-75 transition-opacity ${
+        className={`fixed inset-0 bg-black bg-opacity-75 transition-opacity ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         initial={{ opacity: 0 }}
@@ -60,47 +46,35 @@ const Navbar = () => {
         transition={{ duration: 0.3 }}
       >
         <motion.div
-          className={`fixed right-0 top-0 w-64 h-[60vh] bg-gray-90 text-white shadow-lg transform transition-transform duration-300 ${
+          className={`fixed right-0 top-0 w-64 h-full bg-gradient-to-b from-gray-800 to-gray-900 shadow-lg transform transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           initial={{ x: 300 }}
           animate={{ x: isOpen ? 0 : 300 }}
         >
-          <div className="flex justify-between items-center p-2 border-b border-gray-700">
-            <h2 className="text-xl font-bold">Menu</h2>
-            <button onClick={toggleMenu} className="text-2xl">
+          <div className="flex items-center justify-between p-4 border-b border-gray-700">
+            <h2 className="text-xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text">
+              Menu
+            </h2>
+            <button
+              onClick={toggleMenu}
+              className="text-2xl text-white hover:bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text transition-all duration-300"
+            >
               <HiX />
             </button>
           </div>
-          <div className="flex flex-col p-2">
-            <a
-              className="mb-2 text-lg text-gray-200 hover:text-secondary transition duration-200"
-              href="#about"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </a>
-            <a
-              className="mb-2 text-lg text-gray-200 hover:text-secondary transition duration-200"
-              href="#skills"
-              onClick={() => setIsOpen(false)}
-            >
-              Skills
-            </a>
-            <a
-              className="mb-2 text-lg text-gray-200 hover:text-secondary transition duration-200"
-              href="#projects"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </a>
-            <a
-              className="text-lg text-gray-200 hover:text-secondary transition duration-200"
-              href="#footer"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </a>
+
+          <div className="p-4 space-y-4">
+            {["About", "Skills", "Projects", "Contact"].map((link) => (
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
+                className="block text-lg font-bold text-gray-200 hover:text-secondary hover:scale-105 transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                {link}
+              </a>
+            ))}
           </div>
         </motion.div>
       </motion.div>
