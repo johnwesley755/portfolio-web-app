@@ -45,7 +45,7 @@ A **local governance platform** that allows **citizens** to access **services**,
 ---
 
 ## 🌐 **Live Portfolio**  
-👉 **Check it out:** [**Portfolio**](https://johnwesley.netlify.app/)  
+👉 **Check it out:** [**Portfolio**](https://johnwesley755.netlify.app/)  
 
 ---
 
@@ -61,7 +61,7 @@ Feel free to reach out:
 ## 🛠️ **How to Run Locally**  
 ```bash
 # Clone the repository
-git clone https://github.com/johnwesley755/portfolio.git
+git clone https://github.com/johnwesley755/portfolio-web-app.git
 
 # Navigate into the directory
 cd portfolio
