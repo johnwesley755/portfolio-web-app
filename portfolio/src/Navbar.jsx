@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="w-full bg-gray-90 px-6 py-4 shadow-md fixed top-0 z-50">
       <div className="max-w-[1280px] mx-auto flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-4xl font-extrabold text-transparent bg-gradient-to-r from-teal-400 via-purple-500 to-pink-600 bg-clip-text animate-glow">
+        <h1 className="text-4xl max-sm:text-3xl font-extrabold text-transparent bg-gradient-to-r from-teal-400 via-purple-500 to-pink-600 bg-clip-text animate-glow">
           John Wesley
         </h1>
 
