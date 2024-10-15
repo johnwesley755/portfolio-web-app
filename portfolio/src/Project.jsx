@@ -51,7 +51,7 @@ const Project = () => {
       <div className="absolute inset-0"></div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.h2
-          className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 animate-pulse"
+          className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-400 animate-pulse"
           initial={{ opacity: 0, translateY: -50 }}
           whileInView={{ opacity: 1, translateY: 0 }}
           viewport={{ once: true }}
