@@ -4,23 +4,19 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-
   const handleScroll = () => {
-    const currentScroll =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const currentScroll = window.scrollY;
 
-    if (currentScroll > lastScrollTop) {
-      // Scrolling down
-      setIsVisible(false);
-    } else {
-      // Scrolling up
+    // Show navbar only when at the top (scroll position = 0)
+    if (currentScroll === 0) {
       setIsVisible(true);
+    } else {
+      setIsVisible(false);
     }
-    setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
   };
 
   useEffect(() => {
@@ -28,7 +24,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, []);
 
   return (
     <nav
@@ -47,7 +43,7 @@ const Navbar = () => {
           {["About", "Skills", "Projects", "Contact"].map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`} // Ensure 'Contact' matches footer's id
+              href={`#${link.toLowerCase()}`}
               className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-indigo-400 hover:scale-105 hover:text-secondary transition-all duration-300"
             >
               {link}
@@ -96,7 +92,7 @@ const Navbar = () => {
             {["About", "Skills", "Projects", "Contact"].map((link) => (
               <a
                 key={link}
-                href={`#${link.toLowerCase()}`} // Link matches id="contact"
+                href={`#${link.toLowerCase()}`}
                 className="block text-lg font-bold text-gray-200 hover:text-secondary hover:scale-105 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >

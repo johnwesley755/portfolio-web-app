@@ -1,6 +1,5 @@
-// Contact.jsx
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import emailjs from "emailjs-com"; // EmailJS integration
 import { toast } from "react-toastify"; // Toast notifications
 import "react-toastify/dist/ReactToastify.css"; // Toastify styles
@@ -11,6 +10,19 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const controls = useAnimation(); // Controls for form animation
+  const ref = useRef(null); // Reference for tracking inView
+  const isInView = useInView(ref, { triggerOnce: false, threshold: 0.3 }); // Trigger animation when 30% of the form is visible
+
+  // Handle visibility-based animations
+  useEffect(() => {
+    if (isInView) {
+      controls.start({ opacity: 1, y: 0 });
+    } else {
+      controls.start({ opacity: 0, y: 50 });
+    }
+  }, [isInView, controls]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,9 +68,14 @@ const Contact = () => {
       <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 animate-pulse">
         Contact Me
       </h2>
+
       <motion.form
-        className="max-w-3xl max-md:bg-transparent border-none mx-auto bg-gray-90 p-10 rounded-lg shadow-lg border border-gray-700"
+        ref={ref} // Attach the ref to the form for inView tracking
+        className="max-w-3xl mx-auto p-10 bg-gray-90 rounded-lg shadow-lg border border-gray-700"
         onSubmit={handleSubmit}
+        initial={{ opacity: 0, y: 50 }} // Initial off-screen position
+        animate={controls} // Controls animation dynamically
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="mb-6">
           <label className="block text-lg font-semibold text-gray-300 mb-2">

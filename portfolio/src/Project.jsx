@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import sidegigImg from "./assets/side-gig.png";
 import vutoriaImg from "./assets/vutoria.png";
@@ -46,6 +46,21 @@ const projects = [
 ];
 
 const Project = () => {
+  const controls = useAnimation();
+
+  // Track whether the element is in view using the useInView hook
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { threshold: 0.3 });
+
+  // Trigger animation based on whether the section is in view
+  React.useEffect(() => {
+    if (isInView) {
+      controls.start({ opacity: 1, translateY: 0 });
+    } else {
+      controls.start({ opacity: 0, translateY: 50 });
+    }
+  }, [isInView, controls]);
+
   return (
     <section id="projects" className="py-20 text-white relative">
       <div className="absolute inset-0"></div>
@@ -53,22 +68,23 @@ const Project = () => {
         <motion.h2
           className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-400 animate-pulse"
           initial={{ opacity: 0, translateY: -50 }}
-          whileInView={{ opacity: 1, translateY: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.5 }}
         >
           My Projects
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          ref={ref} // Reference for useInView tracking
+        >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               className="relative group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer bg-gray-90 hover:shadow-[0_0_15px_5px] hover:shadow-purple-500"
               onClick={() => window.open(project.link, "_blank")}
-              initial={{ opacity: 0, translateY: 30 }}
-              whileInView={{ opacity: 1, translateY: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              initial={{ opacity: 0, translateY: 50 }}
+              animate={controls} // Bind animation controls to scrolling behavior
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="relative h-64">
