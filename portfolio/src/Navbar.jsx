@@ -15,12 +15,12 @@ const Navbar = () => {
         </h1>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-8 text-lg font-bold">
+        <div className="hidden md:flex space-x-8 text-lg font-extrabold text-xl">
           {["About", "Skills", "Projects", "Contact"].map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 hover:scale-105 hover:text-secondary transition-all duration-300"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-500 hover:scale-105 hover:text-secondary transition-all duration-300"
             >
               {link}
             </a>

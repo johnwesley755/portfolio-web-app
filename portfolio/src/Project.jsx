@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import sidegigImg from "./assets/side-gig.png";
 import vutoriaImg from "./assets/vutoria.png";
 import soulsborneImg from "./assets/soulsborne.png";
@@ -46,23 +47,24 @@ const projects = [
 
 const Project = () => {
   return (
-    <section id="projects" className="py-20 text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="projects" className="py-20 bg-gray-90 text-white relative">
+      <div className="absolute inset-0"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-10"
+          className="text-5xl md:text-6xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 animate-pulse"
           initial={{ opacity: 0, translateY: -50 }}
           whileInView={{ opacity: 1, translateY: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Projects
+          My Projects
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="relative group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer hover:border-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-purple-500/50"
+              className="relative group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer bg-gray-90 hover:shadow-[0_0_15px_5px] hover:shadow-purple-500"
               onClick={() => window.open(project.link, "_blank")}
               initial={{ opacity: 0, translateY: 30 }}
               whileInView={{ opacity: 1, translateY: 0 }}
@@ -73,17 +75,22 @@ const Project = () => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover transition-opacity duration-500 opacity-40 group-hover:opacity-20"
+                  className="w-full h-full object-cover transition-opacity duration-500 opacity-50 group-hover:opacity-30"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-500"></div>
               </div>
-              <div className="absolute bottom-0 p-6">
-                <h4 className="text-2xl font-bold text-white group-hover:text-violet-500 transition-colors duration-300">
+
+              <div className="p-6">
+                <h4 className="text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-500 group-hover:animate-pulse">
                   {project.name}
                 </h4>
-                <p className="mt-2 text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
+                <p className="text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
                   {project.description}
                 </p>
+
+                <div className="flex justify-end mt-4">
+                  <FaExternalLinkAlt className="text-white group-hover:text-blue-400 transition-colors duration-300" />
+                </div>
               </div>
             </motion.div>
           ))}

@@ -23,10 +23,11 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-20 text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="about" className="py-20 text-white bg-gray-90 relative">
+      <div className="absolute inset-0"></div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-10"
+          className="text-5xl md:text-6xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-glow"
           initial={{ opacity: 0, translateY: -50 }}
           animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -35,43 +36,36 @@ const About = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg md:text-xl text-center mb-8 leading-relaxed"
+          className="text-xl md:text-2xl text-center mb-8 leading-relaxed text-gray-200"
           initial={{ opacity: 0, translateY: 20 }}
           animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           I'm John Wesley, an aspiring web developer and UI/UX designer with a
-          passion for creating innovative digital experiences. My journey began
-          with a fascination for technology and design, and I strive to build
+          passion for creating innovative digital experiences. I strive to build
           solutions that not only look great but also provide excellent user
           experiences.
         </motion.p>
 
         <motion.p
-          className="text-lg md:text-xl text-center mb-8 leading-relaxed"
+          className="text-lg md:text-xl text-center mb-8 leading-relaxed text-gray-200"
           initial={{ opacity: 0, translateY: 20 }}
           animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          I hold a strong foundation in front-end development, and I am
-          proficient in technologies such as HTML, CSS, JavaScript, and React.
-          My approach to web development focuses on clean code, responsive
-          design, and user-centered features. In addition to development, I
-          enjoy the creative side of UI/UX design, where I can blend aesthetics
-          with functionality.
+          I specialize in front-end development with a strong foundation in
+          HTML, CSS, JavaScript, and React. I focus on clean code, responsive
+          design, and crafting user-centered experiences.
         </motion.p>
 
         <motion.p
-          className="text-lg md:text-xl text-center mb-8 leading-relaxed"
+          className="text-lg md:text-xl text-center mb-8 leading-relaxed text-gray-200"
           initial={{ opacity: 0, translateY: 20 }}
           animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          Apart from my technical skills, I am committed to lifelong learning
-          and keeping up with industry trends. I believe that effective
-          communication and collaboration are crucial in any project, and I
-          enjoy working in team environments where I can contribute my skills
-          while learning from others.
+          Beyond development, I enjoy UI/UX design, blending aesthetics with
+          functionality to create user-friendly designs.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -82,11 +76,13 @@ const About = () => {
             animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <FaCode className="text-4xl text-white mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Web Development</h3>
+            <FaCode className="text-4xl text-white mb-4 animate-glow" />
+            <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 animate-glow">
+              Web Development
+            </h3>
             <p className="text-center text-gray-200">
               Proficient in HTML, CSS, JavaScript, and React. I love building
-              responsive and interactive web applications that enhance user
+              responsive, interactive applications that enhance user
               experiences.
             </p>
           </motion.div>
@@ -98,43 +94,52 @@ const About = () => {
             animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <FaPaintBrush className="text-4xl text-white mb-4" />
-            <h3 className="text-2xl font-bold mb-2">UI/UX Design</h3>
+            <FaPaintBrush className="text-4xl text-white mb-4 animate-glow" />
+            <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 animate-glow">
+              UI/UX Design
+            </h3>
             <p className="text-center text-gray-200">
-              Passionate about creating user-friendly designs and improving user
-              experiences through effective UI/UX principles and design
-              thinking.
+              I design intuitive, user-friendly interfaces that marry form and
+              function to create memorable user experiences.
             </p>
           </motion.div>
 
           {/* Continuous Learner Card */}
           <motion.div
-            className="flex flex-col items-center p-6  rounded-lg border-4 border-transparent transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-green-500 to-teal-500 hover:shadow-lg hover:shadow-green-500/50"
+            className="flex flex-col items-center p-6 rounded-lg border-4 border-transparent transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-green-500 to-teal-500 hover:shadow-lg hover:shadow-green-500/50"
             initial={{ opacity: 0, translateY: 20 }}
             animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
-            <FaUserGraduate className="text-4xl text-white mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Continuous Learner</h3>
+            <FaUserGraduate className="text-4xl text-white mb-4 animate-glow" />
+            <h3 className="text-2xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-600 animate-glow">
+              Continuous Learner
+            </h3>
             <p className="text-center text-gray-200">
-              Committed to lifelong learning, I continuously seek to expand my
-              skills and knowledge in web technologies and design, regularly
-              engaging in online courses and community events.
+              Dedicated to learning and growing, I stay current with the latest
+              industry trends through courses, hackathons, and community
+              projects.
             </p>
           </motion.div>
         </div>
 
-        <motion.p
-          className="text-lg md:text-xl text-center mt-10 leading-relaxed"
+        <motion.div
+          className="text-lg md:text-xl text-center mt-10 leading-relaxed text-gray-200"
           initial={{ opacity: 0, translateY: 20 }}
           animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
           transition={{ duration: 0.5, delay: 1.4 }}
         >
-          When I'm not coding, I enjoy exploring new technologies, working on
-          personal projects, and participating in hackathons. I believe that
-          every challenge is an opportunity for growth, and I'm excited about
-          the journey ahead!
-        </motion.p>
+          <p>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 animate-glow">
+              "I believe in continuous growth and pushing the boundaries of
+              creativity and technology."
+            </span>
+          </p>
+          <p>
+            Whether it's coding, design, or learning, I'm always excited to
+            explore new horizons and challenge myself to improve.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

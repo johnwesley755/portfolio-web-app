@@ -57,7 +57,7 @@ const HeroSection = () => {
 
         {/* Heading with Animated Gradient Text */}
         <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-500 to-blue-600 animate-text-glow">
-          Hi, I'm <span className="text-secondary">John Wesley</span>
+          Hi, I'm <span className="font-extrabold text-transparent bg-gradient-to-r from-teal-400 via-purple-500 to-pink-600 bg-clip-text animate-glow">John Wesley</span>
         </h1>
 
         {/* Rotating Text Animation */}
