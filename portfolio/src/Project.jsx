@@ -47,7 +47,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-90 text-white relative">
+    <section id="projects" className="py-20 text-white relative">
       <div className="absolute inset-0"></div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.h2

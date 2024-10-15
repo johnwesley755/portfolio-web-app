@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profileImg from "./assets/profile.jpg"; // Your profile image
+import profileImg from "./assets/profile(2).png"; // Your profile image
 import resume from "./assets/Resume.pdf"; // Path to your resume
 
 const HeroSection = () => {
@@ -8,7 +8,7 @@ const HeroSection = () => {
   const rotatingTexts = ["Web Developer", "UI/UX Designer"];
 
   return (
-    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden bg-gray-90">
+    <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black animate-gradient-motion -z-10"></div>
 
@@ -51,7 +51,7 @@ const HeroSection = () => {
           <img
             src={profileImg}
             alt="John Wesley"
-            className="w-full h-full rounded-full border-4 border-secondary shadow-2xl hover:shadow-[0_0_30px_10px] hover:shadow-secondary/70 transition duration-500"
+            className="w-full h-full cursor-pointer rounded-full border-4 border-secondary shadow-2xl hover:shadow-[0_0_30px_10px] hover:shadow-secondary/70 transition duration-500"
           />
         </div>
 

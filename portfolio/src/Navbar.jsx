@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
@@ -6,8 +6,36 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  const handleScroll = () => {
+    const currentScroll =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Scrolling down
+      setIsVisible(false);
+    } else {
+      // Scrolling up
+      setIsVisible(true);
+    }
+    setLastScrollTop(currentScroll <= 0 ? 0 : currentScroll);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollTop]);
+
   return (
-    <nav className="w-full bg-gray-90 px-6 py-4 shadow-md fixed top-0 z-50">
+    <nav
+      className={`w-full px-6 py-4 shadow-md fixed top-0 z-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="max-w-[1280px] mx-auto flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-4xl max-sm:text-3xl font-extrabold text-transparent bg-gradient-to-r from-teal-400 via-purple-500 to-pink-600 bg-clip-text animate-glow">
@@ -15,12 +43,12 @@ const Navbar = () => {
         </h1>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-8 text-lg font-extrabold text-xl">
+        <div className="hidden md:flex space-x-8 text-lg text-xl font-extrabold">
           {["About", "Skills", "Projects", "Contact"].map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-500 hover:scale-105 hover:text-secondary transition-all duration-300"
+              href={`#${link.toLowerCase()}`} // Ensure 'Contact' matches footer's id
+              className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-indigo-400 hover:scale-105 hover:text-secondary transition-all duration-300"
             >
               {link}
             </a>
@@ -68,7 +96,7 @@ const Navbar = () => {
             {["About", "Skills", "Projects", "Contact"].map((link) => (
               <a
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                href={`#${link.toLowerCase()}`} // Link matches id="contact"
                 className="block text-lg font-bold text-gray-200 hover:text-secondary hover:scale-105 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >

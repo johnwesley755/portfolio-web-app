@@ -4,8 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gray-90 py-10 text-white" id="footer">
-      {/* Background Gradient */}
+    <footer className="relative py-10 text-white">
       <div className="absolute inset-0"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -55,7 +54,6 @@ const Footer = () => {
             >
               <span className="relative block">
                 {icon}
-                {/* Gradient Glow Effect */}
                 <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 group-hover:blur-md transition-all duration-300 bg-gradient-to-r from-purple-400 to-blue-400"></span>
               </span>
             </motion.a>
