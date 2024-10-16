@@ -45,7 +45,7 @@ A **local governance platform** that allows **citizens** to access **services**,
 ---
 
 ## 🌐 **Live Portfolio**  
-👉 **Check it out:** [**Portfolio**](https://johnwesley755.netlify.app/)  
+👉 **Check it out:** [**Portfolio**](https://johnwesley-755.netlify.app/)  
 
 ---
 
