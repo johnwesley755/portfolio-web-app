@@ -14,7 +14,7 @@ Welcome to **my portfolio**! This space showcases my journey of creating **user-
 ## 📸 **Website Screenshot**  
 Here’s a sneak peek at my portfolio:  
 
-![Portfolio Screenshot](./portfolio/src/assets/screenshot.png)  
+![Portfolio Screenshot](./portfolio/src/assets/screenshot(1).png)  
 ---
 
 ## 📁 **Projects**  
