@@ -19,7 +19,7 @@ const Navbar = () => {
     <div>
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full px-6 py-4 z-50 backdrop-blur-lg transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full px-6 py-4 z-50 transition-transform duration-300 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >

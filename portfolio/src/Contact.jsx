@@ -70,7 +70,7 @@ const Contact = () => {
 
       <motion.form
         ref={ref} // Attach the ref to the form for inView tracking
-        className="max-w-3xl max-sm:bg-transparent border-none mx-auto p-10 bg-gray-90 rounded-lg shadow-lg border border-gray-700"
+        className="max-w-3xl max-sm:bg-transparent border-none mx-auto p-10 rounded-lg shadow-lg border border-gray-700"
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 50 }} // Initial off-screen position
         animate={controls} // Controls animation dynamically
