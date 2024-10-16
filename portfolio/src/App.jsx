@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ToastContainer } from "react-toastify"; // Moved ToastContainer here
-import { AnimatedBackground } from "animated-backgrounds"; // Import AnimatedBackground
+import Particle from "./Particle";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
@@ -14,12 +14,8 @@ const App = () => {
 
 
   return (
-    <div
- className="bg-gray-90">
-      {/* Animated Background with full-page coverage */}
-
-
-      {/* Your app content */}
+    <div className="bg-gray-90">
+      <Particle />
       <Navbar />
       <Hero />
       <About />
@@ -28,7 +24,6 @@ const App = () => {
       <Timeline />
       <Contact />
       <Footer />
-
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
     </div>
   );

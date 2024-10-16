@@ -52,7 +52,6 @@ const Contact = () => {
       });
     }
   };
-
   const inputAnimation = {
     whileHover: {
       scale: 1.05,
