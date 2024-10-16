@@ -74,7 +74,7 @@ const Timeline = () => (
     <h2 className="text-6xl max-sm:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 animate-pulse">
       Experience Timeline
     </h2>
-    <div className="relative max-w-6xl mx-auto">
+    <div className="relative max-w-6xl mx-auto cursor-pointer">
       <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div>
 
       <div className="flex flex-wrap justify-center gap-8">
