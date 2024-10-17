@@ -4,11 +4,6 @@
 
 > **"I believe in solving problems through creativity and innovation."**  
 
----
-
-## 🎥 **Portfolio Preview**  
-Here’s an engaging preview of my portfolio in action:  
-
 ![Portfolio GIF](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzYzZ2QzcmU1cXQwYXp1eW1qcHJydHU1cGFwNXNhcjM3bzIxMHhzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)  
 
 ---
