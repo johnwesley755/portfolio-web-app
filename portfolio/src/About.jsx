@@ -71,7 +71,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Web Development Card */}
           <motion.div
-            className="flex flex-col items-center p-6 rounded-lg border-white bg-gray-90 transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50"
+            className="flex flex-col items-center p-6 rounded-lg border hover:border-none bg-gray-90 transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/50"
             initial={{ opacity: 0, translateY: 20 }}
             animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
@@ -89,7 +89,7 @@ const About = () => {
 
           {/* UI/UX Design Card */}
           <motion.div
-            className="flex flex-col items-center p-6 rounded-lg border-white bg-gray-90 transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-purple-500/50"
+            className="flex flex-col items-center p-6 rounded-lg border hover:border-none bg-gray-90 transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-purple-500 to-pink-500 hover:shadow-lg hover:shadow-purple-500/50"
             initial={{ opacity: 0, translateY: 20 }}
             animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.5, delay: 1 }}
@@ -106,7 +106,7 @@ const About = () => {
 
           {/* Continuous Learner Card */}
           <motion.div
-            className="flex flex-col items-center p-6 rounded-lg border-white bg-gray-90 transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-green-500 to-teal-500 hover:shadow-lg hover:shadow-green-500/50"
+            className="flex flex-col items-center p-6 rounded-lg border hover:border-none bg-gray-90 transition-all duration-300 transform hover:scale-105 hover:cursor-pointer hover:border-gradient-to-r from-green-500 to-teal-500 hover:shadow-lg hover:shadow-green-500/50"
             initial={{ opacity: 0, translateY: 20 }}
             animate={isVisible ? { opacity: 1, translateY: 0 } : {}}
             transition={{ duration: 0.5, delay: 1.2 }}

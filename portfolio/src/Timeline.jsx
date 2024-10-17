@@ -50,7 +50,7 @@ const TimelineCard = ({ icon: Icon, title, date, details, index }) => {
   return (
     <motion.div
       ref={ref} // Attach ref to track visibility
-      className="relative flex items-center p-6 bg-gray-900 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 w-full sm:max-w-[calc(50%-20px)] lg:max-w-[calc(33.33%-20px)]"
+      className="relative flex items-center p-6 bg-gray-900 border hover:border-none rounded-lg shadow-lg transition-all duration-300 w-full sm:max-w-[calc(50%-20px)] lg:max-w-[calc(33.33%-20px)]"
       initial={{ opacity: 0, y: 50 }} // Initial off-screen state
       animate={controls} // Control animation dynamically
       transition={{ duration: 0.6, delay: index * 0.2 }}

@@ -81,7 +81,7 @@ const Project = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="relative group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer bg-gray-90 hover:shadow-[0_0_15px_5px] hover:shadow-purple-500"
+              className="relative border hover:border-none group rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 cursor-pointer bg-gray-90 hover:shadow-[0_0_15px_5px] hover:shadow-purple-500"
               onClick={() => window.open(project.link, "_blank")}
               initial={{ opacity: 0, translateY: 50 }}
               animate={controls} // Bind animation controls to scrolling behavior
@@ -91,7 +91,7 @@ const Project = () => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover transition-opacity duration-500 opacity-50 group-hover:opacity-30"
+                  className="w-full h-full object-cover transition-opacity duration-500"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-500"></div>
               </div>

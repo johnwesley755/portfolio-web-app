@@ -57,11 +57,11 @@ const Skills = () => {
   const renderSkillCard = (skill, index) => (
     <motion.div
       key={index}
-      className="p-1 rounded-xl hover:from-green-400 hover:to-blue-600 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
+      className="p-1 rounded-xl border hover:border-none hover:from-green-400 hover:to-blue-600 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
       initial={{ opacity: 0, translateY: -50 }}
       whileInView={{ opacity: 1, translateY: 0 }}
       exit={{ opacity: 0, translateY: 20 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.2, delay: index * 0.1 }}
     >
       <div className="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg hover:shadow-xl hover:shadow-purple-500/50">
         <div className="text-5xl text-white glow-icon mb-4">{skill.icon}</div>
