@@ -34,7 +34,7 @@ Here are some of the most exciting projects I’ve worked on:
 ---
 
 ## 🌐 **Live Portfolio**  
-Check it out 👉 [**John Wesley's Portfolio**](https://johnwesley-755.netlify.app/)  
+Check it out 👉 [**John Wesley's Portfolio**](https://portfolio-web-app-67f10.web.app/)  
 
 ---
 
