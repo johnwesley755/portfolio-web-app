@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
           {/* Logo */}
           <h1
-            className="text-4xl font-extrabold bg-gradient-to-r from-pink-400 to-indigo-400 
+            className="text-4xl max-sm:text-3xl font-extrabold bg-gradient-to-r from-pink-400 to-indigo-400 
             bg-clip-text text-transparent z-30"
           >
             John Wesley
