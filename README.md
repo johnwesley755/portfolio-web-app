@@ -25,10 +25,10 @@ Here are some of the most exciting projects I’ve worked on:
 3. **🎓 [Soulsborne](https://soulsborne-bba5f.web.app/)**  
    A **student community platform** that encourages **collaboration** and **peer learning**.  
 
-4. 🎶 **Namma Isai Music Player**  
+4. **🎶 [Namma Isai](https://github.com/johnwesley755/namma-isai-music)**  
    A **simple music player** with **playlists, smooth audio controls**, and **responsive UI**.  
 
-5. 🌍 **Gram Panchayat Website**  
+5. **🌍 [Gram Panchayat Website](https://github.com/johnwesley755/gram-panchayat)**  
    A **local governance portal** offering **citizen services**, **complaints handling**, and **ward details**.  
 
 ---
