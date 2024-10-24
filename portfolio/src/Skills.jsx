@@ -58,7 +58,7 @@ const Skills = () => {
     <motion.div
       key={index}
       className="p-1 rounded-xl border hover:border-none hover:from-green-400 hover:to-blue-600 transition-transform duration-300 transform hover:scale-105 cursor-pointer"
-      initial={{ opacity: 0, translateY: -50 }}
+      initial={{ opacity: 0, translateY: -20 }}
       whileInView={{ opacity: 1, translateY: 0 }}
       exit={{ opacity: 0, translateY: 20 }}
       transition={{ duration: 0.2, delay: index * 0.1 }}
