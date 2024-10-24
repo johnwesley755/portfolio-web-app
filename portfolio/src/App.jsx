@@ -12,7 +12,7 @@ import Footer from "./Footer";
 
 const App = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen text-white">
+    <div className="bg-gray-90">
       <Particle />
       <Navbar />
       <Hero />
