@@ -26,14 +26,14 @@ const Navbar = () => {
         <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
           {/* Logo */}
           <h1
-            className="text-4xl max-sm:text-3xl font-extrabold bg-gradient-to-r from-pink-400 to-indigo-400 
+            className="text-5xl max-sm:text-3xl font-extrabold bg-gradient-to-r from-pink-400 to-indigo-400 
             bg-clip-text text-transparent z-30"
           >
             John Wesley
           </h1>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-10 text-lg font-bold z-20">
+          <div className="hidden md:flex space-x-10 text-2xl font-bold z-20">
             {["About", "Skills", "Projects", "Contact"].map((link) => (
               <motion.a
                 key={link}

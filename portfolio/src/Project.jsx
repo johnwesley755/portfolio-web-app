@@ -93,7 +93,7 @@ const Project = () => {
                   alt={project.name}
                   className="w-full h-full object-cover transition-opacity duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50 group-hover:bg-opacity-70 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-opacity duration-500"></div>
               </div>
 
               <div className="p-6">

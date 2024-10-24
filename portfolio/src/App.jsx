@@ -11,10 +11,8 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 
 const App = () => {
-
-
   return (
-    <div className="bg-gray-90">
+    <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen text-white">
       <Particle />
       <Navbar />
       <Hero />
